@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Ejercicio Obligatorio 8</title>
+</head>
+<body class="bg-dark d-flex justify-content-center m-5 p-5">
+
+    <div class="m-5 p-5">
+        <h1><p class="text-center text-monospace text-white">Ingrese al sistema</p></h1>
+        <div class="bg-secondary p-5 d-flex flex-column justify-content-center rounded">
+            
+                <input class="form-control mb-3 text-monospace" placeholder="@Usuario" id="usuario" type="text">
+                <input class="form-control mb-3 text-monospace" placeholder="Contraseña" id="contraseña" type="password">
+
+                <button type="submit" class="btn btn-success w-75 align-self-center text-monospace" onclick="return validarDatos()">Ingresar</button>
+            
+        </div>
+
+        <script>
+        var nombre = document.getElementById("usuario");
+        var contraseña = document.getElementById("contraseña");
+
+        function validarDatos(){
+
+            if ((nombre.value == null) || (nombre.value == "")) {  
+                alert("complete el campo de usuario"); 
+            }else if((contraseña.value == null) || (contraseña.value == ""))
+            {
+                alert("complete el campo de contraseña");
+            }
+            else if(nombre.value.includes("@"))
+            {
+                alert("sus datos se cargaron");
+            }else{
+                alert("usuario incorrecto, falto un @")
+            }
+            
+        }
+
+        </script>
+    </div>
+    
+</body>
+</html>
